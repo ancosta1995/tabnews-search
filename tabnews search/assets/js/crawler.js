@@ -37,6 +37,7 @@ const searchContent = (value) => {
     }
     if(configs.content_loaded === true) {
         elements.content.innerHTML = '';
+        var check_search = false
         for(var i = 0; i < allContent.length; i++) {
             if(allContent[i]['title'].toLowerCase().indexOf(value) !== -1) {
                 var html = `
@@ -55,7 +56,16 @@ const searchContent = (value) => {
                     </article>
                 `;
                 elements.content.insertAdjacentHTML('beforeend', html)
+                check_search = true
             }
+        }
+        if(check_search === false) {
+            var html = `
+            <div display="flex" class="Box-sc-1gh2r6s-0 iSlIEy" style="visibility: visible;">
+                <h2 class="Heading-sc-1irtotl-0 iposCX">Nenhum conteúdo encontrado para "${value}"</h2>
+            </div>
+            `;
+            elements.main.innerHTML = html;
         }
     }
 }

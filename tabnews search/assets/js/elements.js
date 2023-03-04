@@ -1,5 +1,6 @@
 const elements = {
     header: document.querySelector('#header'),
+    main: document.querySelector('.Box-sc-1gh2r6s-0.kraPei'),
     content: document.querySelector('.Box-sc-1gh2r6s-0.hyGYav'),
     pagination: document.querySelector('.Box-sc-1gh2r6s-0.efuwIK'),
     inputSearch: () => {

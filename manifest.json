@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "version": "1.00",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://tabnews.com.br/*",
+                "https://www.tabnews.com.br/*"
+            ],
+            "js": [
+                "./assets/js/axios.min.js",
+                "./assets/js/elements.js",
+                "./assets/js/crawler.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://tabnews.com.br/*",
+        "https://www.tabnews.com.br/*"
+    ],
+    "name": "Tabnews Search",
+    "description": "Sistema de busca para o tabnews",
+    "author": "Anderson Costa",
+    "action": {
+        "default_title": "Tabnews Search",
+        "default_popup": "",
+        "default_icon": "./assets/img/icon.png"
+    },
+    "icons": {
+        "16": "./assets/img/icon.png",
+        "48": "./assets/img/icon.png",
+        "128": "./assets/img/icon.png"
+    }
+}
